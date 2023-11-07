@@ -3,4 +3,5 @@ from-root==1.0.2
 fastapi
 uvicorn
 ultralytics
+imutils
 -e .
