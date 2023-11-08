@@ -5,6 +5,7 @@ setup(
     version="0.0.0", 
     author="ebrahim", 
     author_email="ebid.py@gmail.com", 
-    packages=find_packages(), 
+    package_dir={"": "src"}, 
+    packages=find_packages(where="src/"), 
     install_requires=[]
 )
