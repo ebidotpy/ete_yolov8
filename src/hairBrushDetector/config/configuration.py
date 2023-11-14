@@ -4,7 +4,8 @@ from pathlib import Path
 from hairBrushDetector.constants import CONFIG_FILE_PATH, PARAMS_FILE_PATH
 from hairBrushDetector.utils import read_yaml, create_directories
 from hairBrushDetector.entity.config_entity import (DataValidationConfig, 
-                                                    DataIngestionConfig)
+                                                    DataIngestionConfig, 
+                                                    TrainingConfig)
 from hairBrushDetector.logger import logging
 from hairBrushDetector.exception import AppException
 
@@ -52,6 +53,25 @@ class ConfigurationManager:
             )
             
             return data_validation_config
+        except Exception as e:
+            raise AppException(e, sys)
+    
+    def get_training_config(self) -> TrainingConfig:
+        try:
+            config = self.config.training
+            params = self.params
+            
+            create_directories([config.root_dir])
+            
+            training_config = TrainingConfig(
+                root_dir=config.root_dir, 
+                status_file_path=config.status_file_path, 
+                epochs=params.EPOCHS, 
+                image_size=params.IMAGE_SIZE
+            )
+            
+            return training_config
+        
         except Exception as e:
             raise AppException(e, sys)
     

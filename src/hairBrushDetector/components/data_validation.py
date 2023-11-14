@@ -25,12 +25,12 @@ class DataValidation:
                     validation_satus=False
                     create_directories([self.validation_config.root_dir])
                     with open(self.validation_config.status_file_path, "w") as f:
-                        f.write(f"Validation status: {validation_satus}")
+                        f.write(f"Validation_status: {validation_satus}")
                 else:
                     validation_satus=True
                     create_directories([self.validation_config.root_dir])
                     with open(self.validation_config.status_file_path, "w") as f:
-                        f.write(f"Validation status: {validation_satus}")
+                        f.write(f"Validation_status: {validation_satus}")
                     
                     
             

@@ -15,3 +15,10 @@ class DataValidationConfig:
     status_file_path: Path
     required_files: list
     
+@dataclass(frozen=True)
+class TrainingConfig:
+    root_dir: Path
+    status_file_path: Path
+    epochs: int
+    image_size: int
+    

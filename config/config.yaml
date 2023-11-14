@@ -8,5 +8,9 @@ data_ingestion:
 
 data_validation:
   root_dir: "artifacts/data_validation"
-  status_file_path: "artifacts/data_validation/status.txt"
+  status_file_path: "artifacts/data_validation/status.yaml"
   required_files: ["images", "labels", "dataset.yaml"]
+
+training:
+  root_dir: "artifacts/yolov8"
+  status_file_path: "artifacts/data_validation/status.yaml"
