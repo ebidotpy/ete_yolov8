@@ -3,7 +3,6 @@ from-root==1.0.2
 fastapi
 uvicorn
 ultralytics
-imutils
 dvc
 python-box==6.0.2
 pyYAML
@@ -11,4 +10,18 @@ tqdm
 ensure==1.0.2
 joblib
 types-pyYAML
+bcrypt
+cryptography
+httptools
+passlib
+psycopg2-binary
+pyasn1
+pydantic
+pycparser
+python-jose
+python-multipart
+sqlalchemy
+starlette
+typing_extensions
+watchfiles
 -e .
