@@ -24,4 +24,5 @@ sqlalchemy
 starlette
 typing_extensions
 watchfiles
+alembic
 -e .
